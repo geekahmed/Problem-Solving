@@ -1,0 +1,9 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/551/problem/A
+*/
+n = int(input())
+a = list(map(int, input().split()))
+for x in a:
+    print(sorted(a, reverse=True).index(x)+1, end=" ")

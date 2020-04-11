@@ -1,0 +1,10 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/540/problem/A
+*/
+n = int(input())
+ 
+result = sum(min(abs(x - y), 10 - abs(x - y)) for x, y in zip(map(int, input()), map(int, input())))
+ 
+print(result)

@@ -1,0 +1,17 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/contest/617/problem/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+      int x = input.nextInt() ;
+
+      System.out.println((x+4) / 5) ;
+
+    }
+
+    }

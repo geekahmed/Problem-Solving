@@ -1,0 +1,20 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/contest/224/problem/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String args[])
+    {
+        int s1 = input.nextInt();
+        int s2 = input.nextInt();
+        int s3 = input.nextInt();
+
+        int summition =  (int) (Math.sqrt((s1*s3)/s2) + Math.sqrt((s1*s2)/s3) + Math.sqrt((s2*s3)/s1)) ;
+        System.out.println(4*summition);
+
+    }
+
+}

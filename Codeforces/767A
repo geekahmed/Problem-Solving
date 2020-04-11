@@ -1,0 +1,34 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/767/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args){
+
+        int n=input.nextInt();
+        int[]snack=new int[n+1];
+        boolean[]vis=new boolean[n+1];
+        int c = n;
+        for (int i = 1; i <= n; i++) {
+            snack[i]=input.nextInt();
+            vis[snack[i]]=true;
+
+            while(vis[c]&& c>0)
+                System.out.print(c-- +" ");
+            System.out.println();
+        }
+
+
+
+    }
+
+
+}
+
+
+    

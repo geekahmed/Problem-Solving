@@ -1,0 +1,42 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/16/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+    int n = input.nextInt() ;
+    int m = input.nextInt() ;
+    boolean tworowsareequal = false ;
+    boolean onerowhavedifferentvalue = false ;
+    ArrayList<String> flag = new ArrayList<>() ;
+    for(int i = 0 ; i < n ; i++){
+        flag.add(i,input.next());
+    }
+       for(int i = 1 ; i<flag.size() ; i++){
+        if(flag.get(i).equals(flag.get(i-1))){
+            tworowsareequal = true ;
+        }
+
+       }
+       for(int i = 0 ; i<flag.size() ; i++){
+        char[] aaa = flag.get(i).toCharArray() ;
+        for(int j = 1 ; j<aaa.length ; j++){
+            if (aaa[j] != aaa[j-1]){
+                onerowhavedifferentvalue = true ;
+            }
+        }
+       }
+    if(tworowsareequal || onerowhavedifferentvalue){
+        System.out.println("NO") ;
+    }else {
+        System.out.println("YES") ;
+    }
+
+    }
+
+
+    }

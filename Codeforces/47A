@@ -1,0 +1,45 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/47/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+
+        int n = input.nextInt() ;
+        boolean m = false ;
+        if (n < 0 ){
+            System.out.println("NO");
+        }
+        int sum = 0 ;
+        for (int i = 1 ; sum <= n ; i++){
+            sum = sum + i ;
+            if(sum == n){
+                m = true ;
+            }
+
+        }
+        if(m==true){
+            System.out.println("YES") ;
+
+        }
+        else {
+            System.out.println("NO") ;
+        }
+
+
+
+
+
+
+    }
+
+    }
+
+
+
+
+    

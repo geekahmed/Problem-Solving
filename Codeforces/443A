@@ -1,0 +1,23 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/443/A
+*/
+import java.util.*;
+
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in) ; 
+    public static void main(String[] args) {
+        String s=input.nextLine();
+        Set <Character> se=new HashSet<Character>();
+
+        for(int i=0;i<s.length();i++)
+        {
+            if(!(s.charAt(i)=='{'||s.charAt(i)=='}'||s.charAt(i)==','||s.charAt(i)==' '))
+                se.add(s.charAt(i));
+        }
+        System.out.println(se.size());
+
+        }
+    }

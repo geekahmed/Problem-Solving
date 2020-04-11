@@ -1,0 +1,26 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/41/A
+*/
+import java.util.*;
+public class JavaStudy {
+static Scanner input = new Scanner (System.in);
+   public static void main(String[] args)  {
+       String s = input.nextLine() ; 
+       
+       String t = input.nextLine() ; 
+       String res = "" ; 
+       for (int i = s.length() - 1 ; i >= 0 ; i--){
+           res += s.charAt(i) ; 
+       }
+       if (res.equals(t)){
+           System.out.println("YES");
+       }
+       else 
+           System.out.println("NO");
+      
+   }
+  
+
+}

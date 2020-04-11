@@ -1,0 +1,41 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/510/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+
+       int n , j , i , m ;
+       n = input.nextInt() ;
+       m = input.nextInt() ;
+       for(i = 1 ; i <=n ;i++){
+           if(i%2==1) {
+               for (j = 1; j <= m; j++) {
+                   System.out.print("#");
+               }
+               System.out.println();
+           }
+           else if (i%4==0){
+               System.out.print("#");
+               for(j=m;j>1;j--){
+                   System.out.print(".");
+               }
+               System.out.println();
+
+           } else{
+               for(j=m;j>1;j--){
+                   System.out.print(".");
+
+               }
+               System.out.println("#");
+
+           }
+       }
+
+    }
+
+    }

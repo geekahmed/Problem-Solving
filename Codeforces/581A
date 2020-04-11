@@ -1,0 +1,31 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/581/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+        int red = input.nextInt() ;
+        int blue = input.nextInt() ;
+        int different = 0 , same = 0 ;
+        if (red > blue){
+            different = blue ;
+            same = (red - blue) / 2 ;
+        }
+        if (red < blue){
+            different = red ;
+            same = (blue-red) / 2 ;
+        }
+        if (red == blue){
+            different = red ;
+            same = 0 ;
+        }
+
+        System.out.println(different + " " + same);
+
+    }
+
+    }

@@ -1,0 +1,28 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/682/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args){
+        int n = input.nextInt() ;
+        int m = input.nextInt() ;
+
+        long[] a = new long[5] ;
+        long[] b = new long[5] ;
+
+        for (int i = 1 ; i <= n ; i++)
+            a[i%5]++ ;
+        for (int i = 1 ; i <= m ; i++)
+            b[i%5]++ ;
+        System.out.println(a[0]*b[0]+a[1]*b[4]+a[2]*b[3]+a[3]*b[2]+a[4]*b[1]);
+
+    }
+
+
+}
+ 

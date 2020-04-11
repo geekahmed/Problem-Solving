@@ -1,0 +1,44 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/431/A
+*/
+import java.util.*;
+public class JavaStudy {
+static Scanner input = new Scanner (System.in);
+   public static void main(String[] args)  {
+       int n1 = input.nextInt() ; 
+       int n2 = input.nextInt() ; 
+       int n3 = input.nextInt() ; 
+       int n4 = input.nextInt() ; 
+       
+       int strip1=0 , strip2=0 , strip3=0 , strip4=0 ; 
+       int sum;
+       input.nextLine() ;
+       String squares = input.nextLine();
+       char[] ss = squares.toCharArray();
+       for (int i = 0 ; i < squares.length() ; i++){
+           if (ss[i] == '1')
+           {
+               strip1 += n1 ;
+           }
+           else if (ss[i] == '2')
+           {
+               strip2 += n2 ; 
+           }
+           else if (ss[i] == '3')
+           {
+               strip3 += n3 ; 
+           }
+            else if (ss[i] == '4')
+           {
+               strip4 += n4 ; 
+           }
+       }
+       sum = strip1 + strip2 + strip3 + strip4 ;
+       System.out.println(sum);
+      
+   }
+  
+
+}

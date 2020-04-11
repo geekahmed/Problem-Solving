@@ -1,0 +1,28 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/950/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+        int l = input.nextInt() ;
+        int r = input.nextInt() ;
+        int a = input.nextInt() ;
+        int min = Math.min(l, r);
+
+        l -= min;
+        r -= min;
+
+        if (a > l + r)
+           System. out.println((min + l + r + (a - l - r) / 2) * 2);
+        else
+            System. out.println((min + a) * 2);
+
+
+
+    }
+
+    }

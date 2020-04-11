@@ -1,0 +1,54 @@
+/* 
+  UVA
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=401
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String args[]) {
+
+        int t = input.nextInt();
+        while (t-- > 0){
+            TestCase testCase = new TestCase();
+            testCase.rectangle1 = new Rectangle(new Point(input.nextInt(),input.nextInt()) , new Point(input.nextInt(),input.nextInt()));
+            testCase.rectangle2 = new Rectangle(new Point(input.nextInt(),input.nextInt()) , new Point(input.nextInt(),input.nextInt()));
+            testCase.printResult();
+            if (t > 0)
+                System.out.println();
+        }
+
+    }
+}
+class Point {
+    public int x ;
+    public  int y;
+
+    public Point (int x , int y){
+        this.x = x ;
+        this.y = y ;
+    }
+}
+class Rectangle {
+    public Point ll;
+    public Point ur;
+    public Rectangle (Point p1 , Point p2){
+        this.ll = p1;
+        this.ur = p2;
+    }
+}
+class TestCase {
+    public Rectangle rectangle1 ;
+    public Rectangle rectangle2 ;
+    public void printResult(){
+        int ans_LL_x = Math.max(rectangle1.ll.x,rectangle2.ll.x);
+        int ans_LL_y = Math.max(rectangle1.ll.y,rectangle2.ll.y );
+        int ans_UR_x = Math.min(rectangle1.ur.x,rectangle2.ur.x);
+        int ans_UR_y = Math.min(rectangle1.ur.y,rectangle2.ur.y );
+        if(ans_LL_x >= ans_UR_x || ans_LL_y >= ans_UR_y)
+            System.out.println("No Overlap");
+        else
+            System.out.println(ans_LL_x + " " + ans_LL_y + " " + ans_UR_x + " " + ans_UR_y);
+    }
+}

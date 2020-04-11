@@ -1,0 +1,27 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/contest/1088/problem/A
+*/
+
+import java.util.*;
+
+public class Solution {
+    static Scanner input = new Scanner(System.in) ; 
+    public static void main(String[] args)  {
+        int x = input.nextInt() ;
+        boolean f = false;
+        for (int a = 1;a <= x && !f ;  a++)
+            for (int b = 1;b <= a && !f;b++)
+                if ((a%b == 0 )&& (a*b > x) && (a/b < x) ) {
+                    System.out.println(a + " " + b);
+                    f = true;
+                }
+        if (!f) System.out.println(-1);
+    }
+
+
+
+
+    
+}

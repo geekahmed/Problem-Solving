@@ -1,0 +1,25 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/355/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int k = input.nextInt();
+        int d = input.nextInt();
+
+        if (d == 0 ) {
+            System.out.println((k==1) ? 0 : "No solution");
+            return;
+        }
+        for (int i = 1 ; i < k ; i++){
+            System.out.print(9);
+        }
+        System.out.print(d);
+
+    }
+
+}

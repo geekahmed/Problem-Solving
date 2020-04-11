@@ -1,0 +1,36 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/59/A
+*/
+import java.util.*;
+public class JavaStudy {
+
+   static  Scanner input = new Scanner (System.in);
+   public static void main(String[] args) {
+       String s1 = input.nextLine();
+       int l =0 , u = 0 ;
+       for (int i =0 ; i < s1.length(); i++)
+       {
+           if (Character.isLowerCase(s1.charAt(i)))
+           {
+               l++ ;
+           }
+           else if (Character.isUpperCase(s1.charAt(i)))
+           {
+               u++ ; 
+           }
+       }
+       if (l > u)
+           System.out.println(s1.toLowerCase());
+       else if (u>l)
+           System.out.println(s1.toUpperCase());
+       else 
+           System.out.println(s1.toLowerCase());
+
+       
+   }
+    
+}
+
+    

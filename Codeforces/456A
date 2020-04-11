@@ -1,0 +1,20 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/456/problem/A
+*/
+import sys
+n = int(input())
+ 
+listOfLap = list()
+ 
+for i in range(n):
+    listOfLap.append(input().split())
+ 
+listOfLap = sorted(listOfLap, key=lambda l: l[0])
+
+for i in range(0,n-1):
+    if listOfLap[i][1] > listOfLap[i+1][1]:
+        print("Happy Alex")
+        sys.exit(0)
+print("Poor Alex")

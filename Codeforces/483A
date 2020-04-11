@@ -1,0 +1,25 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/483/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        long l = input.nextLong() ;
+        long r = input.nextLong() ;
+        if (l%2 != 0)
+            l++;
+        if (Math.abs(r-l) < 2){
+            System.out.println(-1) ;
+        } else {
+            System.out.println(l + " " + (l+1) + " " + (l+2));
+        }
+
+        }
+
+}
+
+    

@@ -1,0 +1,26 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/contest/214/problem/A
+*/
+
+
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String args[])
+    {
+        int n = input.nextInt();
+        int m = input.nextInt();
+        int b = 0 , counter = 0 ;
+        for (int a = 0 ; a*a <= n ; a++){
+            b = n -  a*a ;
+            if (m == a + b*b){
+                counter++;
+            }
+
+        }
+        System.out.println(counter);
+    }
+}
+    

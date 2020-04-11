@@ -1,0 +1,54 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/122/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+      int n = input.nextInt();
+      boolean k = true;
+      if (n == 1){
+          System.out.println("NO");
+          return;
+      }
+      if (isLucky(n)){
+          System.out.println("YES");
+          return;
+      }
+
+      for (int i = 1 ; i <= n ; i++){
+            if (isLucky(i) && (n % i == 0)) {
+                k = true;
+                break;
+            }else
+                k = false;
+
+      }
+
+      if (k)
+          System.out.println("YES");
+      else
+          System.out.println("NO");
+
+    }
+
+    static boolean isLucky (int n ){
+        int count = 0 , count_digits = 0 ;
+        while (n > 0){
+            int digit = n % 10;
+            count_digits++;
+            if (digit == 4 || digit == 7){
+                count++;
+            }
+            n /= 10 ;
+        }
+       if (count == count_digits)
+           return true;
+        else
+            return false;
+    }
+
+}

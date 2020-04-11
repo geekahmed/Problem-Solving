@@ -1,0 +1,28 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/71/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in) ; 
+    public static void main(String[] args) {
+        int t = input.nextInt() ;
+        input.nextLine() ;
+
+        while (t-- > 0) {
+            String s = input.next().toLowerCase();
+            input.nextLine() ;
+            String abb = "";
+            if (s.length() > 10) {
+                int num = s.length() - 2;
+                abb = s.charAt(0) + "" + num + s.charAt(s.length() - 1);
+                System.out.println(abb);
+            } else
+                System.out.println(s);
+        }
+
+        }
+    }
+
+    

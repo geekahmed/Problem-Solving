@@ -1,0 +1,25 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/467/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+        int n = input.nextInt() ;
+        int c = 0 ;
+        while (n-- > 0){
+            int p = input.nextInt() ;
+            int q = input.nextInt() ;
+            if(p<q && (q-p >= 2)){
+                c++ ;
+            }
+        }
+
+        System.out.println(c);
+
+    }
+
+    }

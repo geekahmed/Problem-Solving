@@ -1,0 +1,39 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/25/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+        int n = input.nextInt() ;
+        int[] nums = new int[n] ;
+        for(int i = 0 ; i < nums.length ; i++){
+            nums[i] = input.nextInt() ;
+        }
+        int odd = 0 , even = 0 , indexodd = 0 , indexeven = 0 ;
+        for(int i = 0 ; i < nums.length ; i++){
+            if(nums[i] % 2 == 0 ){
+                indexeven = i+1 ;
+                even++;
+            } else {
+                indexodd = i+1 ;
+                odd++ ;
+            }
+        }
+
+        if(odd == 1){
+            System.out.println(indexodd) ;
+        }
+        else {
+            System.out.println(indexeven) ;
+        }
+
+    }
+
+    }
+
+
+    

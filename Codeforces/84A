@@ -1,0 +1,6 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/84/problem/A
+*/
+print(3*int(input())//2)

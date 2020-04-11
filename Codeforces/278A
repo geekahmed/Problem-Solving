@@ -1,0 +1,38 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/278/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = input.nextInt() ;
+        int[] distances = new int[n] ;
+        for (int i = 0 ; i < n ; i++)
+            distances[i] = input.nextInt() ;
+        int s = input.nextInt() - 1;
+        int t = input.nextInt() - 1;
+        int temp=0;
+        if(s>t)
+        {
+            temp=s;
+            s=t;
+            t=temp;
+        }
+        int res1 = 0 , res2 = 0  ;
+        for (int i = s ; i < t ; i++)
+            res1 += distances[i] ;
+
+        for (int i = 0 ; i < s ; i++)
+            res2 += distances[i] ;
+
+        for (int i=t ;i<n;i++){
+
+            res2+=distances[i];
+        }
+        System.out.println(Math.min(res1,res2));
+    }
+}

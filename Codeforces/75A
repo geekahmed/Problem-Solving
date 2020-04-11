@@ -1,0 +1,41 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/75/A
+*/
+import java.util.*;
+public class JavaStudy {
+static Scanner input = new Scanner (System.in);
+   public static void main(String[] args)  {
+       String a = input.nextLine() ; 
+       String b = input.nextLine() ; 
+       
+       int sum = Integer.parseInt(a) + Integer.parseInt(b) ;
+       String c = Integer.toString(sum)  ;
+       int a1 = remove_zero(a) ; 
+       int b1 = remove_zero(b) ; 
+       int c1 = remove_zero(c) ;
+       
+       int sum2 = a1+b1 ; 
+       
+       if (sum2 == c1 ){
+           System.out.println("YES");
+       }
+       else 
+           System.out.println("NO");
+    
+    }
+   public static int remove_zero (String x ){
+       String x1 ="";
+       for (int i = 0 ; i < x.length() ; i++){
+           if (x.charAt(i) != '0'){
+               x1 += x.charAt(i) ;
+           }
+       }
+       
+       int x2 = Integer.parseInt(x1) ; 
+       return x2 ;
+   }
+  
+
+}

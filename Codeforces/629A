@@ -1,0 +1,32 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/629/problem/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+ 
+    public static void main(String args[]) {
+        int n = input.nextInt();
+        char[][] cake = new char[n][n] ;
+        for (int i = 0 ; i < n ; i++){
+            cake[i] = input.next().toCharArray() ;
+        }
+ 
+        long happiness =  0;
+        for (int i = 0 ; i < n ; i++){
+            int sumRows = 0 , sumColumns = 0 ;
+            for (int j = 0 ; j < n ; j++){
+                sumRows += (cake[i][j] == 'C') ? 1 : 0 ;
+                sumColumns += (cake[j][i] == 'C') ? 1 : 0 ;
+            }
+            happiness += co(sumRows) + co(sumColumns);
+        }
+        System.out.println(happiness);
+ 
+    }
+    static long co (int n){
+        return ((n)*(n-1)) / 2 ;
+    }
+}

@@ -1,0 +1,32 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/69/A
+*/
+import java.util.*;
+public class JavaStudy {
+static Scanner input = new Scanner (System.in);
+
+   public static void main(String[] args)  {
+       int n = input.nextInt() ;
+       int fx = 0 ; 
+       int fy = 0 ; 
+       int fz = 0 ; 
+        
+       while (n-- > 0){
+           int x = input.nextInt() ;
+           fx += x ;
+           int y = input.nextInt() ; 
+           fy += y ; 
+           int z = input.nextInt() ; 
+           fx += z ;
+       
+       }
+       if (fx==0 && fy==0 && fz==0)
+           System.out.println("YES");
+       else 
+           System.out.println("NO");
+   }
+  
+
+}

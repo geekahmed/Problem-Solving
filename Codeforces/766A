@@ -1,0 +1,23 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/766/A
+*/
+import java.util.*;
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+       String a = input.next() ;
+       String b = input.next() ;
+       if(a.equals(b)) {
+           System.out.println(-1);
+       } else {
+           System.out.println(Math.max(a.length() , b.length())) ;
+       }
+
+    }
+
+    }
+
+
+    

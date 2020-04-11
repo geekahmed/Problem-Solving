@@ -1,0 +1,71 @@
+/* 
+  UVA
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=417
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String args[]) {
+
+        ArrayList<Rectangle> rectangles = new ArrayList<>() ;
+        StringBuilder stringBuilder = new StringBuilder() ;
+        while (input.next().charAt(0) != '*'){
+            Point a = new Point(input.nextDouble(), input.nextDouble());
+            Point b = new Point(input.nextDouble(), input.nextDouble()) ;
+            rectangles.add(new Rectangle(a,b));
+        }
+        int count = 0 ;
+        while (true){
+            count++;
+            double a = input.nextDouble() ;
+            double b = input.nextDouble();
+            if (a == 9999.9 && b == 9999.9) break;
+            Point point = new Point(a,b) ;
+            boolean contain = false;
+            for (int i = 0 ; i < rectangles.size() ; i++){
+                if (rectangles.get(i).isContain(point)){
+                    contain = true;
+                    stringBuilder.append("Point "+count+" is contained in figure "+(i+1)+"\n");
+                }
+            }
+            if (!contain)
+                stringBuilder.append("Point "+count+" is not contained in any figure\n");
+        }
+        System.out.print(stringBuilder);
+
+
+
+
+
+
+    }
+
+
+}
+
+ class Point {
+    double x ;
+    double y ;
+     public Point(double x , double y){
+         this.x = x ;
+         this.y = y ;
+     }
+}
+
+
+class Rectangle {
+    Point upperLeft ;
+    Point lowerRight ;
+    public Rectangle(Point x , Point y){
+        this.upperLeft = x ;
+        this.lowerRight = y ;
+    }
+    public boolean isContain (Point p){
+        if (p.x > upperLeft.x && p.x < lowerRight.x && p.y > lowerRight.y && p.y < upperLeft.y){
+            return true;
+        }
+        return false;
+    }
+}

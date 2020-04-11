@@ -1,0 +1,25 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/problemset/problem/884/A
+*/
+import java.io.*;
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String args[]) {
+        int n = input.nextInt() ;
+        int t = input.nextInt();
+        int count = 0 ;
+        int[] a = new int[n] ;
+        for (int i = 0 ; i < n ; i++){
+            a[i] =   86400 - input.nextInt()  ;
+            t -= a[i] ;
+            count++;
+            if (t <= 0)
+                break;
+        }
+        System.out.println(count);
+        }
+
+    }

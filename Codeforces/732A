@@ -1,0 +1,26 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/732/A
+*/
+import java.util.*;
+public class JavaStudy {
+static Scanner input = new Scanner (System.in);
+   public static void main(String[] args)  {
+       int shovel = input.nextInt() ; 
+       int change = input.nextInt() ; 
+       int sum = 1 ; 
+       while (true){
+if ( (shovel*sum)%10 == change || (shovel*sum)%10 == 0 ){
+    
+    System.out.println(sum);
+    break;
+}
+sum++ ;
+       }
+       
+      
+   }
+  
+
+}

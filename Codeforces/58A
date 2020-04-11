@@ -1,0 +1,28 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/58/A
+*/
+import java.util.*;
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+        String st = input.next() ;
+        String hello = "hello";
+        int total = 0;
+        for (int i = 0 ; i<hello.length();i++) {
+            char x = hello.charAt(i);
+            int index = st.indexOf(x);
+            if (index >= 0) {
+                total++;
+                st = st.substring(index+1, st.length());
+            }
+
+        }
+        if (total==hello.length())
+            System.out.println("YES");
+        else
+            System.out.println("NO");
+    }
+
+    }

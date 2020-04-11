@@ -1,0 +1,27 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/378/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int a = input.nextInt() ;
+        int b = input.nextInt() ;
+        int aWins = 0 , bWins = 0 , draw = 0 ;
+        for(int i = 1 ; i<= 6 ; i++){
+            if (Math.abs(a-i) < Math.abs(b-i)){
+                aWins++ ;
+            } else if (Math.abs(a-i) > Math.abs(b-i)){
+                bWins++ ;
+            } else {
+                draw++ ;
+            }
+        }
+        System.out.println(aWins + " " + draw + " " + bWins);
+
+    }
+}

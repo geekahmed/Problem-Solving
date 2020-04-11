@@ -1,0 +1,60 @@
+
+import java.io.*;
+import java.util.*;
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = input.nextInt() ;
+        int[] A = new int[n] ;
+        for (int i = 0 ; i < A.length ; i++)
+            A[i] = input.nextInt() ;
+        if(n == 1){
+            System.out.println("NO");
+            return;
+        }
+
+
+        int temp = 0 ;
+
+        for (int i = 0 ; i < A.length ; i++){
+            int[] result= findMin(A,i) ;
+            int min = result[0] ;
+            int indexMin = result[1] ;
+            if(A[i] > min){
+                temp = A[i] ;
+                A[i] = min ;
+                A[indexMin] = temp ;
+            }
+
+
+        }
+        boolean flag = false ;
+        for(int i = 1 ; i < A.length ; i++){
+            if(A[i] != A[i-1]){
+                System.out.println(A[i]);
+                return;
+            } else {
+                flag = true ;
+            }
+        }
+        if (flag){
+            System.out.println("NO");
+            return;
+        }
+    }
+    static int[] findMin (int[] array , int start){
+        int min = array[start] ;
+        int indexMin = 0 ;
+        for(int i = start+1 ; i < array.length ; i++){
+            if(array[i] < min){
+                min = array[i] ;
+                indexMin = i ;
+            }
+
+        }
+        return new int[] {min,indexMin} ;
+    }
+
+}

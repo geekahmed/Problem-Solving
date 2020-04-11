@@ -1,0 +1,30 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/731/A
+*/
+import java.util.*;
+public class JavaStudy {
+static Scanner input = new Scanner (System.in);
+   public static void main(String[] args)  {
+    String S = input.nextLine();
+    int Smoves = 0 ;
+    int strt = 0 ; 
+    
+    for (int i = 0 ; i < S.length() ; i++){
+        int index =(int) (S.charAt(i) - 97) ;
+        int walk = Math.abs(strt-index);
+        if( walk > 13 ){
+			Smoves +=  26 - walk ; 
+		}else{
+		    Smoves +=  walk ;
+        }
+		strt = index ;
+        
+    }
+       System.out.println(Smoves);
+      
+   }
+  
+
+}

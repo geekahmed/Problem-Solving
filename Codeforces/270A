@@ -1,0 +1,23 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/contest/270/problem/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String args[]) {
+       int t = input.nextInt();
+       while (t-- > 0){
+           double a = input.nextDouble();
+           double result = 360/ (180 - a) ;
+           int intPart = (int) result;
+           if (result - intPart > 0){
+               System.out.println("NO");
+           } else {
+               System.out.println("YES");
+           }
+       }
+    }
+
+}

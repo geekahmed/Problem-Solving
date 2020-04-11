@@ -1,0 +1,9 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/432/problem/A
+*/
+n, k = map(int, input().split())
+par = list(map(int, input().split()))
+ 
+print(sum(x <= 5-k for x in par) // 3)

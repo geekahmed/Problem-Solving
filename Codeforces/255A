@@ -1,0 +1,37 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/255/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+       int t = input.nextInt() ;
+       int nChest = 0 , nBiceps = 0 , nBack = 0 ;
+       int[] exer = new int[t] ;
+       for (int i = 0 ; i < exer.length ; i++){
+           exer[i] = input.nextInt() ;
+       }
+       for(int i = 0 ; i<exer.length ; i+=3){
+           nChest += exer[i] ;
+       }
+        for(int i = 1 ; i<exer.length ; i+=3){
+            nBiceps += exer[i] ;
+        }
+        for(int i = 2 ; i<exer.length ; i+=3){
+            nBack += exer[i] ;
+        }
+
+        if(nChest>nBiceps&&nChest>nBack)
+            System.out.println("chest");
+        else if(nBiceps>nChest&&nBiceps>nBack)
+            System.out.println("biceps");
+        else
+            System.out.println("back");
+
+    }
+
+    }
+   

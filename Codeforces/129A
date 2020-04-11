@@ -1,0 +1,30 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/129/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args) throws AWTException {
+        int n = input.nextInt() ;
+        int[] nums = new int[n] ;
+        int sum = 0 , ways=0 ;
+
+        for (int i = 0 ; i < nums.length ; i++){
+            nums[i] = input.nextInt() ;
+            sum += nums[i] ;
+        }
+
+        for (int m: nums) {
+            if((sum-m)%2 == 0){
+                ways++ ;
+            }
+
+        }
+        System.out.println(ways);
+
+    }
+
+    }

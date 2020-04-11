@@ -1,0 +1,22 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/604/problem/A
+*/
+
+mList = list(map(int, input().split()))
+ 
+wList = list(map(int, input().split()))
+ 
+hs, hu = map(int, input().split())
+ 
+prob = [500, 1000, 1500, 2000, 2500]
+res = 0
+for i in range(len(wList)):
+    res += max(0.3*prob[i], (1-(mList[i]/250)) * prob[i] - (50*wList[i]))
+ 
+res = res + (hs * 100) - (hu * 50)
+ 
+ 
+print(int(res))
+ 

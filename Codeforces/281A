@@ -1,0 +1,21 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/281/A
+*/
+import java.util.*;
+public class JavaStudy {
+
+   static  Scanner input = new Scanner (System.in);
+   public static void main(String[] args) {
+       String s1 = input.nextLine();
+       char  ch = Character.toUpperCase(s1.charAt(0));
+       System.out.print(ch );
+       for (int i = 1 ; i < s1.length() ; i++)
+       {
+           
+           System.out.print(s1.charAt(i));
+       }
+       System.out.println();
+   }
+}

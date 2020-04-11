@@ -1,0 +1,39 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/357/problem/A
+*/
+ 
+import java.util.Scanner;
+
+public class Main {
+
+     static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args) {
+        int m = input.nextInt() ;
+        int[] c = new int[m+1];
+        int sum = 0, res = 0 ;
+        for (int i = 1 ; i <= m ; i++){
+            c[i] = input.nextInt() ;
+            sum += c[i] ;
+        }
+        int x = input.nextInt(); int y = input.nextInt();
+        int firstgroup = 0 , secondgroup = 0 ;
+        boolean flag = false ;
+        for (int i = 1 ; i <= m ; i++){
+            if ((x <= firstgroup && firstgroup <= y) && (x <= secondgroup && secondgroup <= y)){
+                flag = true;
+                break;
+            } else {
+                firstgroup += c[i];
+                secondgroup = sum - firstgroup ;
+                res = i ;
+            }
+        }
+
+        System.out.println((!flag) ? 0 : res+1);
+
+
+
+    }
+}

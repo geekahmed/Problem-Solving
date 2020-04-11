@@ -1,0 +1,35 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/53/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String str = input.next();
+        int n = input.nextInt();
+        String[] list = new String[n];
+        ArrayList<String> splittedList = new ArrayList<>();
+        for (int i = 0; i < list.length; i++) {
+            list[i] = input.next();
+            if (list[i].startsWith(str))
+                splittedList.add(list[i]) ;
+
+
+        }
+        if (splittedList.size() == 0)
+            System.out.println(str);
+        else {
+            Collections.sort(splittedList);
+            System.out.println(splittedList.get(0));
+        }
+
+    }
+
+
+}
+
+
+    

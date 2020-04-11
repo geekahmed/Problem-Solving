@@ -1,0 +1,9 @@
+    
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/495/problem/A
+*/
+n=list(map(int,input()))
+a=[2,7,2,3,3,4,2,5,1,2]
+print(a[n[0]]*a[n[1]])

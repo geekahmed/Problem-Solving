@@ -1,0 +1,30 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/339/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in) ; 
+    public static void main(String[] args) {
+       String s = input.next() ;
+       String[] sparts = s.split("\\+") ;
+        int[] array = Arrays.asList(sparts).stream().mapToInt(Integer::parseInt).toArray();
+        Arrays.sort(array);
+        String s1="";
+
+        for(int i=0;i<array.length;i++){
+
+            s1+=array[i];
+
+            if(i!=array.length-1){
+
+                s1+="+";
+
+            }
+
+        }
+        System.out.println(s1);
+
+        }
+    }

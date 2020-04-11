@@ -1,0 +1,39 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/80/A
+*/
+
+import java.util.*;
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args){
+
+    int[] primesFrom2to50 = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47} ;
+    int n = input.nextInt();
+    int m = input.nextInt() ;
+    int nIndex = 0 , mIndex = 0 ;
+    for (int i = 0 ; i < primesFrom2to50.length ; i++){
+        if (primesFrom2to50[i] == n){
+            nIndex = i ;
+        }
+        if (primesFrom2to50[i] == m){
+            mIndex = i ;
+        }
+    }
+
+    if (mIndex - nIndex == 1){
+        System.out.println("YES");
+    } else {
+        System.out.println("NO");
+    }
+
+
+
+    }
+
+
+}
+

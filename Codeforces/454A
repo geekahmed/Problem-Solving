@@ -1,0 +1,38 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/454/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+
+        int n = input.nextInt();
+
+        int d = 0;
+        int half = n / 2 + 1;
+
+        char[][] map = new char[n][n];
+        for (int i = 0; i < n; i++) {
+            Arrays.fill(map[i], '*');
+        }
+        for (int i = 1; i <= n; i++) {
+            for (int j = half - d; j <= half + d; j++) {
+                map[i-1][j-1] = 'D';
+            }
+            if (i >= half) d--;
+            else d++;
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(map[i][j]);
+            }
+            System.out.println();
+        }
+
+    }
+
+    }

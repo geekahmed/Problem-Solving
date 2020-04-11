@@ -1,0 +1,36 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/707/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        int n = input.nextInt() ;
+        int m = input.nextInt() ;
+
+        char[][] photo = new char[n][m] ;
+        for(int i = 0 ; i < n ; i++ ){
+
+            for(int j = 0 ; j < m ; j++){
+                photo[i][j] = input.next().charAt(0);
+                if (photo[i][j] == 'C' || photo[i][j] == 'M' || photo[i][j] == 'Y' ){
+                    System.out.println("#Color");
+                    return;
+                }
+            }
+        }
+         System.out.println("#Black&White") ;
+
+
+
+    }
+
+}
+
+
+    

@@ -1,0 +1,31 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/387/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        String curTime = input.next(), pastTime = input.next();
+        int curHour = Integer.parseInt(curTime.substring(0,2));
+        int curMin = Integer.parseInt(curTime.substring(3,5));
+        int pastHour = Integer.parseInt(pastTime.substring(0,2));
+        int pastMin = Integer.parseInt(pastTime.substring(3,5));
+
+        int totalHour;
+        if (curHour < pastHour) totalHour = 24 - pastHour + curHour;
+        else totalHour = curHour - pastHour;
+
+        int totalMin;
+
+        if (curMin < pastMin) {
+            totalMin = 60 - pastMin + curMin;
+            if (curHour == pastHour) totalHour = 23;
+            else totalHour--;
+        } else totalMin = curMin - pastMin;
+
+        System.out.print(totalHour < 10 ? "0" + totalHour + ":" : totalHour + ":");
+        System.out.print(totalMin < 10 ? "0" + totalMin : totalMin);
+    }
+}

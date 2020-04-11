@@ -1,0 +1,26 @@
+/* 
+  UVA
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1047
+*/
+
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String args[]) throws IOException {
+        int x , y ;
+        while (input.hasNextInt()){
+             x = input.nextInt();
+            y = input.nextInt();
+            System.out.printf("%10d%10d    %s\n\n", x, y, gcd(x, y) == 1 ? "Good Choice" : "Bad Choice");
+        }
+        }
+static int gcd (int x , int y){
+        if (y == 0 )
+            return x ;
+        return gcd(y,x%y) ;
+        }
+
+
+}

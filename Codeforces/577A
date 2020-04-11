@@ -1,0 +1,28 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/577/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+       long n = input.nextLong() ;
+       long k = input.nextLong();
+       long  counter = 0;
+       for(long i = 1 ; i <= n  ;i++){
+               if (k % i == 0 && k / i <= n)
+                   counter++;
+           }
+           System.out.println(counter);
+
+
+    }
+
+
+
+
+}

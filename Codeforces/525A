@@ -1,0 +1,21 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/525/problem/A
+*/
+n = int(input())
+doors = input()
+charList = [0] * 26
+res = 0
+ 
+for char in doors:
+    if char.islower():
+        charList[ord(char) - ord('a')] += 1
+    else:
+        if charList[ord(char) - ord('A')] == 0:
+            res += 1
+        else:
+            charList[ord(char) - ord('A')] -= 1
+ 
+ 
+print(res)

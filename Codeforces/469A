@@ -1,0 +1,38 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/469/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+        int n = input.nextInt() ;
+        int x = input.nextInt() ;
+        int[] xPass = new int[x] ;
+        for(int i = 0 ; i < xPass.length ; i++){
+            xPass[i] = input.nextInt() ;
+        }
+        int y = input.nextInt() ;
+        int[] yPass = new int[y] ;
+        for(int i = 0 ; i < yPass.length ; i++){
+            yPass[i] = input.nextInt() ;
+        }
+        Set<Integer> set = new HashSet<Integer>();
+        for(int i = 0 ; i < xPass.length ; i++){
+            set.add(xPass[i]) ;
+        }
+        for(int i = 0 ; i < yPass.length ; i++){
+            set.add(yPass[i]) ;
+        }
+        if(set.size() < n){
+            System.out.println("Oh, my keyboard!") ;
+        }else{
+            System.out.println("I become the guy.") ;
+        }
+
+
+    }
+
+    }

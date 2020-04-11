@@ -1,0 +1,58 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/404/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+        int t=input.nextInt();
+        char c[][]=new char[t][t];
+        boolean f=false;
+        char first,sec;
+        for(int i=0;i<t;i++)
+        {
+            String s=input.next();
+            for(int j=0;j<t;j++)
+            {
+                c[i][j]=s.charAt(j);
+                first=c[0][0];
+                sec=c[0][1];
+                if(i==j)
+                {
+                    if(first!=c[i][j])
+                    {
+                        f=true;
+                    }
+                }
+                else if(i==t-1-j)
+                {
+                    if(first!=c[i][j])
+                    {
+                        f=true;
+                    }
+
+                }
+                else
+                {
+                    if(sec!=c[i][j]||first==c[i][j])
+                    {
+                        f=true;
+                    }
+                }
+
+            }
+            if(f)
+                break;
+        }
+        if(f)
+            System.out.println("NO");
+        else
+            System.out.println("YES");
+    }
+
+    }
+
+    

@@ -1,0 +1,14 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: https://codeforces.com/contest/492/problem/A
+*/
+n = int(input())
+ 
+h, count = 0, 0
+ 
+while count <= n:
+    h += 1
+    count += (h*(h+1)) // 2
+ 
+print(h-1)

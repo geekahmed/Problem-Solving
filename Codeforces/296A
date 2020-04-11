@@ -1,0 +1,35 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/296/A
+*/
+
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+       int n = input.nextInt();
+       int[] arr = new int[n] ;
+        int[] arr1 = new int[1001] ;
+       for(int i = 0 ; i < n ; i++){
+           arr[i] = input.nextInt();
+           arr1[arr[i]]++;
+    }
+        if (n == 1) {
+            System.out.println("YES");
+            return;
+        } else {
+            for (int i = 1; i < arr1.length; i++) {
+                if (arr1[i] > ((n + 1) / 2)) {
+                    System.out.println("NO");
+                    return;
+                }
+            }
+        }
+        System.out.println("YES");
+
+
+    }
+
+}
+ 

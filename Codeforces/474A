@@ -1,0 +1,40 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/474/A
+*/
+import java.util.*;
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+       String status = input.next() ;
+       String n = input.next() ;
+
+       String res = keyboard(n,status) ; 
+       System.out.println(res);
+
+    }
+    static public String keyboard(String inputSTR , String status){
+        char[] keyBoardLayOutCH = "qwertyuiopasdfghjkl;zxcvbnm,./".toCharArray() ;
+        char[] inputSTRCH = inputSTR.toCharArray() ;
+        String original = "" ;
+        if(status.equals("R")){
+            for(int i = 0 ; i <inputSTRCH.length ; i++){
+                for (int j = 0 ; j < keyBoardLayOutCH.length ; j++){
+                    if(inputSTRCH[i] == keyBoardLayOutCH[j]){
+                        original += keyBoardLayOutCH[j-1] ;
+                    }
+                }
+            }
+        }else {
+            for(int i = 0 ; i <inputSTRCH.length ; i++){
+                for (int j = 0 ; j < keyBoardLayOutCH.length ; j++){
+                    if(inputSTRCH[i] == keyBoardLayOutCH[j]){
+                        original += keyBoardLayOutCH[j+1] ;
+                    }
+                }
+            }
+        }
+        return original ;
+    }
+    }

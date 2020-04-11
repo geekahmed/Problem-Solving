@@ -1,0 +1,25 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/266/A
+*/
+import java.util.*;
+public class JavaStudy {
+static Scanner input = new Scanner (System.in);
+   public static void main(String[] args)  {
+        int n = input.nextInt() ; 
+        input.nextLine() ;
+        String s = input.nextLine() ;
+        int c = 0 ; 
+        for (int i = 1 ; i < n ; i++){
+            if (s.charAt(i) == s.charAt(i-1)){
+                c++ ;
+            }
+        }
+       
+       System.out.println(c);
+       
+    }
+  
+
+}

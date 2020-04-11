@@ -1,0 +1,33 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/282/A
+*/
+import java.util.*;
+public class JavaStudy {
+static Scanner input = new Scanner (System.in);
+  public static void main(String[] args)  {
+       int n = input.nextInt() ;
+       input.nextLine() ;
+        int x = 0 ;
+       while (n-- > 0){
+             
+       String s = input.nextLine() ; 
+       
+           if (s.contains("+"))
+           {
+               x++;
+           }
+           else if (s.contains("-")){
+               x--;
+           }
+       }
+ 
+     
+       System.out.println(x);
+  
+      
+   }
+  
+
+}

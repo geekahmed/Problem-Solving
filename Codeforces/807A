@@ -1,0 +1,38 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/807/A
+*/
+
+import java.util.*;
+
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in) ; 
+    public static void main(String[] args) {
+        int n = input.nextInt() ;
+        int[] a = new int[n]  ;
+        int[] b = new int[n] ;
+
+        for (int i = 0 ; i < n; i++){
+            a[i] = input.nextInt() ;
+            b[i] = input.nextInt();
+            if (a[i] != b[i]) {
+                System.out.println("rated");
+                return;
+            }
+        }
+
+        for (int i = 1 ; i < n; i++){
+            if (a[i] > a[i-1]) {
+                System.out.println("unrated");
+                return;
+            }
+        }
+        System.out.println("maybe") ;
+
+
+}
+
+    
+}

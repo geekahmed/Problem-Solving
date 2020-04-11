@@ -1,0 +1,30 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/546/A
+*/
+import java.util.*;
+
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+    int k = input.nextInt() ;
+    int n = input.nextInt() ;
+    int w = input.nextInt() ;
+
+    int sumFrom1ToW = 0 ;
+    for(int i = 1 ; i<=w ; i++){
+        sumFrom1ToW+=i ;
+    }
+    if (((k*sumFrom1ToW)-n) < 0 ) {
+        System.out.println(0);
+    } else {
+        System.out.println((k * sumFrom1ToW) - n);
+
+    }
+
+
+    }
+
+
+    }

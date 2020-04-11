@@ -1,0 +1,23 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/579/A
+*/
+import java.util.*;
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+        int x = input.nextInt() ;
+        int sol = 0 ;
+        while(x>0){
+            if(x%2 != 0){
+                sol += 1 ;
+            }
+            x /=2 ;
+        }
+        System.out.println(sol) ;
+
+    }
+
+    }
+    

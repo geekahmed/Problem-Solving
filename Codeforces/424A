@@ -1,0 +1,51 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/424/A
+*/
+
+import java.util.*;
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args){
+
+        int n = input.nextInt();
+        String hamster = input.next();
+        int X = 0 , x = 0 , ans = 0  ;
+        char[] hamsterChar = hamster.toCharArray() ;
+        for (int i = 0 ; i < hamster.length() ; i++){
+
+            if (hamster.charAt(i) == 'X'){
+                X++;
+            } else {
+                x++ ;
+            }
+            if (X > n/2)
+            {
+                hamsterChar[i] = 'x';
+                ans++ ;
+                X--;
+            }
+            if (x > n/2)
+            {
+                hamsterChar[i] = 'X';
+                ans++;
+                x--;
+            }
+
+
+        }
+
+
+        System.out.println(ans);
+        for (char e:hamsterChar) {
+            System.out.print(e) ;
+        }
+    }
+
+
+
+
+}

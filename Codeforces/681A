@@ -1,0 +1,34 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/contest/681/problem/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String args[]) {
+
+        int n = input.nextInt();
+        //input.nextLine();
+        int i  = 0;
+        for (i = 0 ; i < n ; i++){
+           // String[] parts = input.nextLine().split(" ") ;
+           // int before = Integer.parseInt(parts[1]);
+            //int After = Integer.parseInt(parts[2]) ;
+            String name = input.next();
+            int before = input.nextInt();
+            int After = input.nextInt();
+            if (before >= 2400 && After > before){
+                System.out.println("YES");
+                break;
+            }
+        }
+
+        if (i >= n){
+            System.out.println("NO");
+        }
+
+
+    }
+
+}

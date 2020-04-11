@@ -1,0 +1,43 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/43/A
+*/
+
+import java.util.*;
+
+
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in) ; 
+    public static void main(String[] args) {
+        int n = input.nextInt() ;
+        String[] teams = new String[n] ;
+
+        for (int i = 0 ; i < n ; i++){
+            teams[i] = input.next() ;
+        }
+        String winner = teams[0] ;
+
+        int count1 = 0 , count2 = 0 ;
+        int indexteam1 = 0 , indexteam2 = 0 ;
+
+        for (int i = 0 ; i < teams.length ; i++){
+            if (teams[i].equals(winner)){
+                count1++ ;
+                indexteam1 = i  ;
+            }
+            else {
+                count2++ ;
+                indexteam2 = i ;
+            }
+        }
+        if (count1 > count2)
+            System.out.println(teams[indexteam1]) ;
+        else
+            System.out.println(teams[indexteam2]) ;
+
+    }
+
+
+    
+}

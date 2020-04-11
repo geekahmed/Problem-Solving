@@ -1,0 +1,33 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/709/A
+*/
+import java.util.*;
+public class JavaStudy {
+        static Scanner input = new Scanner(System.in) ;
+    public static void main(String[] args){
+       int n = input.nextInt() ;
+       int b = input.nextInt() ;
+       int d = input.nextInt() ;
+       int[] oranges = new int[n] ;
+       for (int i = 0 ; i < oranges.length ; i++){
+           oranges[i] = input.nextInt() ;
+       }
+       int count = 0  , count2 = 0  ;
+       for(int i = 0 ; i < oranges.length ; i++){
+           if(oranges[i] <= b){
+               count += oranges[i] ;
+           }
+           if (count > d){
+               count2++ ;
+               count = 0 ;
+           }
+       }
+
+
+        System.out.println(count2);
+
+    }
+
+    }

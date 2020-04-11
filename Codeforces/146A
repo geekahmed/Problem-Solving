@@ -1,0 +1,41 @@
+/* 
+  By: Ahmed Moustafa
+  Mail: geekahmed1@gmail.com
+  Problem Link: http://codeforces.com/problemset/problem/146/A
+*/
+import java.util.*;
+public class JavaStudy {
+    static Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
+        int n = input.nextInt();
+        String number = input.next() ;
+        if (!isLucky(number)){
+            System.out.println("NO");
+            return;
+        }
+        int sum1 = 0 , sum2 = 0 ;
+        for (int i = 0 ; i < n/2 ; i++){
+            sum1 += (int) number.charAt(i) ;
+        }
+        for (int i = n-1 ; i >= n/2 ; i--){
+            sum2 += (int) number.charAt(i) ;
+        }
+        if(sum1 == sum2)
+            System.out.println("YES");
+        else
+            System.out.println("NO");
+
+    }
+
+    static boolean isLucky (String s){
+        for (int i = 0 ; i < s.length() ; i++){
+            if (s.charAt(i) == '4' || s.charAt(i) == '7'){
+                continue;
+            } else {
+                return false;
+
+            }
+        }
+        return true;
+    }
+}
